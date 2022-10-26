@@ -5,9 +5,7 @@ export default function Home() {
    const [data, setData] = useState({});
    useEffect(() => {
       (async () => {
-         const response = await fetch("https://jsonplaceholder.typicode.com/todos/1").then((res) =>
-            res.json()
-         );
+         const response = await fetch("/api/hello").then((res) => res.json());
          setData(response);
       })();
    }, []);
